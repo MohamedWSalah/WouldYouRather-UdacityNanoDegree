@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.Header {
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Header h3 {
+  display: block;
+  height: 100%;
+  margin: 0 15px 0 0;
+  padding: 15px;
+}
+
+.Header h3:hover {
+  background-color: tomato;
+  cursor: pointer;
+}
+
+.LoginDiv {
+  position: absolute;
+
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+  vertical-align: auto;
+}

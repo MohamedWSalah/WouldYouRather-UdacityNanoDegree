@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import Header from "./components/Header";
+import Login from "./components/Login";
+import { useSelector } from "react-redux";
+import LoadingBar from "react-redux-loading-bar";
+import Dashboard from "./components/Dashboard";
 
 function App() {
+  const loggedUser = useSelector((state) => state.loggedUser);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <LoadingBar />
+        {loggedUser !== "" ? (
+          <Redirect to="/" exact component={Dashboard} />
+        ) : (
+          <Redirect to="/login" exact component={Login} />
+        )}
+        <Route path="/login" exact component={Login} />
+        <Route path="/" exact component={Dashboard} />
+      </div>
+    </Router>
   );
 }
 
