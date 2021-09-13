@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import { useSelector } from "react-redux";
 import LoadingBar from "react-redux-loading-bar";
 import Dashboard from "./components/Dashboard";
+import NotFound from "./components/NotFound";
 
 function App() {
   const loggedUser = useSelector((state) => state.loggedUser);

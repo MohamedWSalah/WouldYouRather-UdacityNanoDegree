@@ -64,3 +64,7 @@
   transform: translate(-50%, -20%);
   vertical-align: auto;
 }
+
+.MuiTabs-flexContainer {
+  place-content: center !important;
+}
