@@ -7,14 +7,12 @@ import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { Avatar } from "@material-ui/core";
-import { BrowserRouter as Redirect } from "react-router-dom";
 import { handleReceivingData } from "../actions/shared";
 import { setLoggedUser } from "../actions/loggedUser";
 
 export default function Login() {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
-  const LU = useSelector((state) => state);
   const [selectedUser, setSelectedUser] = useState("");
   useEffect(() => {
     dispatch(handleReceivingData());

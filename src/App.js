@@ -1,5 +1,11 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  HashRouter,
+  Switch,
+} from "react-router-dom";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import { useSelector } from "react-redux";
@@ -14,13 +20,17 @@ function App() {
     <Router>
       <div className="App">
         <LoadingBar />
-        {loggedUser !== "" ? (
-          <Redirect to="/" exact component={Dashboard} />
-        ) : (
-          <Redirect to="/login" exact component={Login} />
-        )}
-        <Route path="/login" exact component={Login} />
-        <Route path="/" exact component={Dashboard} />
+        <Switch>
+          <Route exact path="/">
+            {loggedUser ? <Dashboard /> : <Redirect to="/login" />}
+          </Route>
+
+          <Route exact path="/login">
+            {loggedUser ? <Redirect to="/" /> : <Login />}
+          </Route>
+
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </Router>
   );
