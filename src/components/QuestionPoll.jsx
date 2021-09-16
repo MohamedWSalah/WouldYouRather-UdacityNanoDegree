@@ -44,40 +44,44 @@ export default function QuestionPoll() {
           Would you rather....
         </Typography>
       </div>
-      <div>
-        <Typography variant="h5" style={{ marginTop: "30px" }}>
-          {question.optionOne.text}
-        </Typography>
-        <CircularProgressWithText value={value1} />
-        <Typography
-          variant="h5"
-          color="secondary"
-          style={{ marginTop: "30px" }}
-        >
-          {question.optionOne.votes.length} Votes out of {totalVotes}{" "}
-          <Typography color="primary">
-            {userAnswer === "optionOne" && "You chose this option"}
+      <Paper elevation={1} style={{ width: "50%", display: "inline-block" }}>
+        <div style={{ display: "inline-block", height: "200px" }}>
+          <Typography variant="h5" style={{ marginTop: "30px" }}>
+            {question.optionOne.text}
           </Typography>
-        </Typography>
-      </div>
-
-      <div>
-        <Typography variant="h5" style={{ marginTop: "30px" }}>
-          {question.optionTwo.text}
-        </Typography>
-
-        <CircularProgressWithText value={value2} />
-        <Typography
-          variant="h5"
-          color="secondary"
-          style={{ marginTop: "30px" }}
-        >
-          {question.optionTwo.votes.length} Votes out of {totalVotes}
-          <Typography color="primary">
-            {userAnswer === "optionTwo" && "You chose this option"}
+          <CircularProgressWithText value={value1} />
+          <Typography
+            variant="h5"
+            color="secondary"
+            style={{ marginTop: "30px" }}
+          >
+            {question.optionOne.votes.length} Votes out of {totalVotes}{" "}
+            <Typography color="primary">
+              {userAnswer === "optionOne" && "You chose this option"}&nbsp;
+            </Typography>
           </Typography>
-        </Typography>
-      </div>
+        </div>
+      </Paper>
+
+      <Paper elevation={1} style={{ width: "50%", display: "inline-block" }}>
+        <div style={{ display: "inline-block", height: "200px" }}>
+          <Typography variant="h5" style={{ marginTop: "30px" }}>
+            {question.optionTwo.text}
+          </Typography>
+
+          <CircularProgressWithText value={value2} />
+          <Typography
+            variant="h5"
+            color="secondary"
+            style={{ marginTop: "30px" }}
+          >
+            {question.optionTwo.votes.length} Votes out of {totalVotes}
+            <Typography color="primary">
+              {userAnswer === "optionTwo" && "You chose this option"}&nbsp;
+            </Typography>
+          </Typography>
+        </div>
+      </Paper>
     </Paper>
   );
 }
