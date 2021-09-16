@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
+import Question from "./QuestionBox";
 
 export default function DashboardTabs(props) {
   const { answeredQuestions, unAnsweredQuestions } = props;
@@ -50,10 +51,14 @@ export default function DashboardTabs(props) {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        {answeredQuestions.map((e) => e.author)}
+        {unAnsweredQuestions.map((e, index) => (
+          <Question key={index} question={e} />
+        ))}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Answered Questions
+        {answeredQuestions.map((e, index) => (
+          <Question key={index} question={e} />
+        ))}
       </TabPanel>
     </div>
   );

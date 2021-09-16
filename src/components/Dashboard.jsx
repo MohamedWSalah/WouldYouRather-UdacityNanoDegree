@@ -12,7 +12,6 @@ export default function Dashboard() {
   const answeredQuestions = () => {
     return Object.values(questions).filter((question) => {
       for (let answerId of Object.keys(currentUser.answers)) {
-        console.log(answerId);
         if (answerId === question.id) return true;
       }
       return false;
@@ -25,7 +24,6 @@ export default function Dashboard() {
   const unAnsweredQuestions = () => {
     return Object.values(questions).filter((question) => {
       for (let answerId of Object.keys(currentUser.answers)) {
-        console.log(answerId);
         if (answerId === question.id) return false;
       }
       return true;
@@ -42,10 +40,20 @@ export default function Dashboard() {
   return (
     <div>
       <Header />
-      <DashboardTabs
-        answeredQuestions={sortedAnsweredQuestions}
-        unAnsweredQuestions={sortedUnansweredQuestions}
-      />
+
+      {questions ? (
+        <DashboardTabs
+          answeredQuestions={sortedAnsweredQuestions}
+          unAnsweredQuestions={sortedUnansweredQuestions}
+        />
+      ) : (
+        <div className="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
     </div>
   );
 }

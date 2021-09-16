@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/login">
             {loggedUser ? <Redirect to="/" /> : <Login />}
           </Route>
-
+          <Route path="questions/:id" />
           <Route component={NotFound} />
         </Switch>
       </div>
