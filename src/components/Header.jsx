@@ -4,6 +4,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { useSelector, useDispatch } from "react-redux";
 
 import { setLoggedUser } from "../actions/loggedUser";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -20,7 +21,9 @@ export default function Header() {
   };
   return (
     <div className="Header">
-      <h3>Dashboard</h3>
+      <Link to="/">
+        <h3>Dashboard</h3>
+      </Link>
       <h3>New Question</h3>
       <h3>Leaderbord</h3>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Paper, Typography, Avatar, Button } from "@material-ui/core";
+import { Link, withRouter } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 export default function QuestionBox(props) {
@@ -52,13 +53,15 @@ export default function QuestionBox(props) {
             {question.optionTwo.text}
           </Typography>
         </div>
-        <Button
-          variant="contained"
-          color="secondary"
-          style={{ width: "80%", marginBottom: "10px" }}
-        >
-          View Question
-        </Button>
+        <Link to={`/questions/${question.id}`}>
+          <Button
+            variant="contained"
+            color="secondary"
+            style={{ width: "80%", marginBottom: "10px" }}
+          >
+            View Question
+          </Button>
+        </Link>
       </div>
     </Paper>
   );
