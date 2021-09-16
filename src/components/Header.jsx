@@ -21,9 +21,12 @@ export default function Header() {
   };
   return (
     <div className="Header">
-      <Link to="/">
-        <h3>Dashboard</h3>
-      </Link>
+      <h3>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          Dashboard
+        </Link>
+      </h3>
+
       <h3>New Question</h3>
       <h3>Leaderbord</h3>
 

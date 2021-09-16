@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import DashboardTabs from "./DashboardTabs";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { handleReceiveQuestions } from "../actions/shared";
 
 export default function Dashboard() {

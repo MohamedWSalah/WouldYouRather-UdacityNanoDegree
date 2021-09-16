@@ -44,6 +44,18 @@
   justify-content: flex-end;
 }
 
+.Header Link {
+  display: block;
+  height: 100%;
+  margin: 0 15px 0 0;
+  padding: 15px;
+}
+
+.Header Link:hover {
+  background-color: tomato;
+  cursor: pointer;
+}
+
 .Header h3 {
   display: block;
   height: 100%;

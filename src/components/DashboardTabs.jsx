@@ -1,15 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 import Question from "./QuestionBox";
-import { useDispatch, useSelector } from "react-redux";
-import { handleReceivingData } from "../actions/shared";
+import { useSelector } from "react-redux";
 
 export default function DashboardTabs() {
-  const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(handleReceivingData());
-  // }, []);
   const currentUser = useSelector((state) => state.users[state.loggedUser]);
   const questions = useSelector((state) => state.questions);
 

@@ -53,7 +53,10 @@ export default function QuestionBox(props) {
             {question.optionTwo.text}
           </Typography>
         </div>
-        <Link to={`/questions/${question.id}`}>
+        <Link
+          to={`/questions/${question.id}`}
+          style={{ textDecoration: "none" }}
+        >
           <Button
             variant="contained"
             color="secondary"
