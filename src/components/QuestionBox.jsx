@@ -1,6 +1,6 @@
 import React from "react";
 import { Paper, Typography, Avatar, Button } from "@material-ui/core";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 export default function QuestionBox(props) {

@@ -14,7 +14,7 @@ import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
 import QuestionPage from "./components/QuestionPage";
 import AddQuestion from "./components/AddQuestion";
-
+import Leaderboard from "./components/Leaderboard";
 function App() {
   const loggedUser = useSelector((state) => state.loggedUser);
 
@@ -36,6 +36,9 @@ function App() {
           </Route>
           <Route exact path="/add">
             {loggedUser ? <AddQuestion /> : <Redirect to="/login" />}
+          </Route>
+          <Route exact path="/leaderboard">
+            {loggedUser ? <Leaderboard /> : <Redirect to="/login" />}
           </Route>
 
           <Route component={NotFound} />
