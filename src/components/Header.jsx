@@ -27,7 +27,11 @@ export default function Header() {
         </Link>
       </h3>
 
-      <h3>New Question</h3>
+      <h3>
+        <Link to="/add" style={{ textDecoration: "none" }}>
+          New Question
+        </Link>
+      </h3>
       <h3>Leaderbord</h3>
 
       <Avatar

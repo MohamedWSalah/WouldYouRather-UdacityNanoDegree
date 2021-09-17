@@ -13,6 +13,7 @@ import LoadingBar from "react-redux-loading-bar";
 import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
 import QuestionPage from "./components/QuestionPage";
+import AddQuestion from "./components/AddQuestion";
 
 function App() {
   const loggedUser = useSelector((state) => state.loggedUser);
@@ -33,6 +34,10 @@ function App() {
           <Route exact path="/questions/:id">
             {loggedUser ? <QuestionPage /> : <Redirect to="/login" />}
           </Route>
+          <Route exact path="/add">
+            {loggedUser ? <AddQuestion /> : <Redirect to="/login" />}
+          </Route>
+
           <Route component={NotFound} />
         </Switch>
       </div>
