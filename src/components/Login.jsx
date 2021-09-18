@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import wyr from "../assets/wyr.png";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -14,9 +14,13 @@ export default function Login() {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
   const [selectedUser, setSelectedUser] = useState("");
-  useEffect(() => {
+
+  const fetchData = useCallback(() => {
     dispatch(handleReceivingData());
-  }, []);
+  }, [dispatch]);
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const handleSignInBtnClick = () => {
     console.log(selectedUser);

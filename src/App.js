@@ -1,9 +1,9 @@
 import "./App.css";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
-  HashRouter,
   Switch,
 } from "react-router-dom";
 import Header from "./components/Header";
@@ -15,6 +15,7 @@ import NotFound from "./components/NotFound";
 import QuestionPage from "./components/QuestionPage";
 import AddQuestion from "./components/AddQuestion";
 import Leaderboard from "./components/Leaderboard";
+
 function App() {
   const loggedUser = useSelector((state) => state.loggedUser);
 

@@ -19,17 +19,23 @@ export default function QuestionBox(props) {
       />
       <div style={{ width: "100%", height: "100%" }}>
         <Typography
+          component={"span"}
           variant="h4"
           color="secondary"
           style={{ display: "inline" }}
         >
           {question.author}
         </Typography>
-        <Typography variant="h5" style={{ display: "inline" }}>
+        <Typography
+          component={"span"}
+          variant="h5"
+          style={{ display: "inline" }}
+        >
           &nbsp; asking Would your rather
         </Typography>
         <div style={{ marginTop: "25px" }}>
           <Typography
+            component={"span"}
             variant="h6"
             color="primary"
             style={{ display: "inline-block", width: "80%" }}
@@ -38,6 +44,7 @@ export default function QuestionBox(props) {
           </Typography>
 
           <Typography
+            component={"span"}
             variant="h3"
             color="secondary"
             style={{ display: "inline-block", width: "100%" }}
@@ -46,6 +53,7 @@ export default function QuestionBox(props) {
           </Typography>
 
           <Typography
+            component={"span"}
             variant="h6"
             color="primary"
             style={{ display: "inline-block", width: "80%" }}

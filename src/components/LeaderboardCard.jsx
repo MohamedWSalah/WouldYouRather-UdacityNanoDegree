@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Avatar, Button } from "@material-ui/core";
+import { Paper, Typography, Avatar } from "@material-ui/core";
 
 export default function LeaderboardCard(props) {
   const { user, index } = props;

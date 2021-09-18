@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Would you rather game Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simply, would you rather is a game where someone gives 2 choices, and other users choose from them.
 
-## Available Scripts
+The project has some functionalities like:
+-Login user (Picking a user from the existing user list).
+-A user can ask a question and answer other users questions from the Dashboard.
+-Users can check there rank among each others by navigating to Leaderboard page.
+-Users can check the poll of each question, how many % or users chose the available options plus providing the user of which option he chose.
 
-In the project directory, you can run:
+## Installing
 
-### `npm start`
+To get started developing right away:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- install all project dependencies with `npm install`
+- start the development server with `npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+and that's it, you are good to go.
 
-### `npm test`
+### Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+So for beginning, You need to login by picking a user from the login list.
+Once logged in, you will be redirected to the Dashboard, where you can see the user's Answer and unanswered questions.
+You can easily answer a question by pressing on `View question` button corresponding to the question you wanna answer. Pick the option you want, and press the `Submit` button.
+You can add new questions by pressing on `New question` on the navbar, and simply type the options for your would you rather game and thats it, submit your question.
+Finally, you can check the users ranks, and the amount of questions each of them answered and asked, all by pressing on `Leaderboard` button on the navbar.
+Feel free to logout by pressing on the logout button on the far right in the navbar.
 
-### `npm run build`
+## NOTE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is an assignment by udacity for The advanced web track nanodegre.e.

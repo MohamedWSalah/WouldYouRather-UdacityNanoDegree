@@ -11,7 +11,7 @@ export default function Leaderboard() {
         Leaderboard
       </Typography>
       {sortedUsers.map((user, index) => (
-        <LeaderboardCard user={user} index={index} />
+        <LeaderboardCard user={user} index={index} key={index} />
       ))}
     </div>
   );

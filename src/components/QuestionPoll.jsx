@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Paper, Typography, Avatar } from "@material-ui/core";
 import CircularProgressWithText from "./CircularProgressWithText";
 
