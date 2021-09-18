@@ -29,3 +29,8 @@ Feel free to logout by pressing on the logout button on the far right in the nav
 ## NOTE
 
 This project is an assignment by udacity for The advanced web track nanodegre.e.
+
+
+### Author
+
+Mohamed Salah
