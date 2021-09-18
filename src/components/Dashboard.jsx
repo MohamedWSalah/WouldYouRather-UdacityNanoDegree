@@ -1,18 +1,10 @@
-import React, { useCallback, useEffect } from "react";
+import React from "react";
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 import Question from "./QuestionBox";
-import { useSelector, useDispatch } from "react-redux";
-import { handleReceiveQuestions } from "../actions/shared";
-export default function Dashboard() {
-  const dispatch = useDispatch();
-  const currentUser = useSelector((state) => state.users[state.loggedUser]);
+import { useSelector } from "react-redux";
 
-  const fetchQuestions = useCallback(() => {
-    dispatch(handleReceiveQuestions());
-  }, [dispatch]);
-  useEffect(() => {
-    fetchQuestions();
-  }, [fetchQuestions]);
+export default function Dashboard() {
+  const currentUser = useSelector((state) => state.users[state.loggedUser]);
 
   const questions = useSelector((state) => state.questions);
 

@@ -60,7 +60,9 @@ export function handleAddQuestion(optionOne, optionTwo) {
       author: loggedUser,
     };
     return _saveQuestion(newQuestion).then((question) => {
-      dispatch(addQuestion(question));
+      const idlessQuestion = Object.assign({}, question, { id: " " });
+
+      dispatch(addQuestion(idlessQuestion));
       dispatch(hideLoading());
     });
   };

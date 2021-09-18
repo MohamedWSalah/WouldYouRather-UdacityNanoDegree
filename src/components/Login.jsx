@@ -7,14 +7,16 @@ import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { Avatar } from "@material-ui/core";
-import { handleReceivingData } from "../actions/shared";
+import { handleReceiveQuestions, handleReceivingData } from "../actions/shared";
 import { setLoggedUser } from "../actions/loggedUser";
-
+import { useLocation, useHistory } from "react-router-dom";
 export default function Login() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const users = useSelector((state) => state.users);
   const [selectedUser, setSelectedUser] = useState("");
 
+  const { state } = useLocation();
   const fetchData = useCallback(() => {
     dispatch(handleReceivingData());
   }, [dispatch]);
@@ -25,6 +27,8 @@ export default function Login() {
   const handleSignInBtnClick = () => {
     console.log(selectedUser);
     dispatch(setLoggedUser(selectedUser));
+    dispatch(handleReceiveQuestions());
+    history.push(state?.from || `/`);
   };
   return (
     <div className="LoginDiv">
