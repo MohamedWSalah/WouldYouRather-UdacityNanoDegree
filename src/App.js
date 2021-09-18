@@ -7,13 +7,14 @@ import { useSelector } from "react-redux";
 import LoadingBar from "react-redux-loading-bar";
 import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
-import QuestionPage from "./components/QuestionPage";
 import AddQuestion from "./components/AddQuestion";
 import Leaderboard from "./components/Leaderboard";
 import PrivateRoute from "./components/PrivateRoute";
+import QuestionsURLCheck from "./components/QuestionsURLCheck";
 
 function App() {
   const loggedUser = useSelector((state) => state.loggedUser);
+  const questions = useSelector((state) => state.questions);
 
   return (
     <Router>
@@ -30,7 +31,7 @@ function App() {
             <Dashboard />
           </PrivateRoute>
           <PrivateRoute exact path="/questions/:id">
-            <QuestionPage />
+            {questions && <QuestionsURLCheck />}
           </PrivateRoute>
           <PrivateRoute exact path="/add">
             <AddQuestion />

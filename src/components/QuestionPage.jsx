@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Paper,
@@ -15,9 +15,12 @@ import QuestionPoll from "./QuestionPoll";
 
 export default function QuestionPage() {
   const dispatch = useDispatch();
+
   const { id } = useParams();
+
   const [answer, setAnswer] = useState("");
   const question = useSelector((state) => state.questions[id]);
+
   const user = useSelector((state) => state.users[state.loggedUser]);
 
   const userAvatar = useSelector(
